@@ -3,12 +3,9 @@ import React, { Fragment } from 'react'
 import Head from 'next/head'
 import Header from '../molecules/Header'
 import ServiceWorkerRegister from '../atoms/ServiceWorkerRegister'
+import Footer from '../molecules/Footer';
 
-export default (props: {
-  children: any,
-  title?: string,
-  description?: string
-}) => {
+export default (props) => {
   return (
     <Fragment>
       <Head>
@@ -20,7 +17,12 @@ export default (props: {
       <ServiceWorkerRegister />
       <Header />
       <hr />
+      <div style={{height: "300px"}}>
+
       {props.children}
+      </div>
+
+      <Footer />
     </Fragment>
   )
 }
